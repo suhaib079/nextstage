@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('companies');
+    return redirect('/home');
 });
 
 Auth::routes();
