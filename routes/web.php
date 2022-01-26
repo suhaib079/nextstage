@@ -21,8 +21,10 @@ Route::get('/', function () {
 // Company routes
 Route::get('companies', [CompanyController::class, 'index'])->name('companies');
 Route::get('company/edit/{id}',[CompanyController::class, 'edit'])->name('companyEdit');
+Route::post('company/edit',[CompanyController::class, 'edditingcompany'])->name('edditingcompany');
 Route::get('company/store', [CompanyController::class, 'store'])->name('companystore');
 Route::post('company/store', [CompanyController::class, 'addingcompany'])->name('addingcompany');
+Route::post('company/delete',[CompanyController::class, 'deleteingcompany'])->name('deleteingcompany');
 
 // Employee routes
 Route::get('employees',[EmployeeController::class, 'index']);

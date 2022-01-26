@@ -33,7 +33,11 @@
                                     <td>{{$company->logo}}</td>
                                     <td>
                                         <a href="{{route('companyEdit', $company->id)}}" type="button" class="btn btn-sm btn-light border mb-1">Edit</a> <br>
-                                        <button type="button" class="btn btn-sm btn-danger ">Delete</button>
+                                        <form action="{{route('deleteingcompany')}}" method="POST">
+                                            @csrf
+                                            <input type="hidden" name="companyid" value="{{$company->id}}">
+                                            <button type="submit" class="btn btn-sm btn-danger ">Delete</button>
+                                        </form>
                                     </td>
                                 </tr>
                                 @endforeach
