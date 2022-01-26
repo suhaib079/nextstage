@@ -19,9 +19,10 @@ Route::get('/', function () {
     return redirect('/home');
 });
 // Company routes
-Route::get('companies', [CompanyController::class, 'index']);
-Route::get('company/edit/{id}',[CompanyController::class, 'edit']);
-Route::get('company/store', [CompanyController::class, 'store']);
+Route::get('companies', [CompanyController::class, 'index'])->name('companies');
+Route::get('company/edit/{id}',[CompanyController::class, 'edit'])->name('companyEdit');
+Route::get('company/store', [CompanyController::class, 'store'])->name('companystore');
+Route::post('company/store', [CompanyController::class, 'addingcompany'])->name('addingcompany');
 
 // Employee routes
 Route::get('employees',[EmployeeController::class, 'index']);

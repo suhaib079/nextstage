@@ -3,22 +3,33 @@
 @section('content')
 
     <div class="container">
-      <form>
+      <h1>create new company</h1>
+      <form action="{{route('addingcompany')}}" method="POST">
+        @csrf
         <div class="form-group">
-          <label for="exampleInputEmail1"> name</label>
-          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="company name">
+          <label class="w-100" > name
+          <input type="text" class="form-control" name="name"   placeholder="company name" required>
+        </label>
         </div>
         <div class="form-group">
-          <label for="exampleInputPassword1">Address</label>
-          <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Address">
+          <label class="w-100" >Address
+          <input type="text" class="form-control" name="address" placeholder="Address">
+        </label>
         </div>
         <div class="form-group">
-          <label for="exampleInputPassword1">Website</label>
-          <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Website">
+          <label class="w-100" >Website
+          <input type="text" class="form-control" name="website" placeholder="Website">
+        </label>
         </div>
         <div class="form-group">
-          <label for="exampleInputPassword1">Email</label>
-          <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Email">
+          <label class="w-100" >Email
+          <input type="text" class="form-control" name="email" placeholder="Email">
+        </label>
+        </div>
+        <div class="form-group">
+          <label class="w-100">logo
+          <input type="file" class="form-control" name="logo" placeholder="logo">
+        </label>
         </div>
        
         <button type="submit" class="btn btn-primary">Submit</button>
