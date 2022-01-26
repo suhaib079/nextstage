@@ -38,7 +38,7 @@
                                 <a class="nav-link" href="{{route('companies')}}">Companies</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="">Employees</a>
+                                <a class="nav-link" href="{{route('employees')}}">Employees</a>
                             </li>
                             <li class="nav-item"><a class="nav-link">{{ Auth::user()->name }}</a>
                             </li>
