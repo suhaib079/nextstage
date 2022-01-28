@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return redirect('/home');
+    return redirect('/companies');
 });
 // Company routes
 Route::get('companies', [CompanyController::class, 'index'])->name('companies');
@@ -43,4 +43,3 @@ Route::post('employee/delete',[EmployeeController::class, 'deleteingemployee'])-
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
