@@ -29,7 +29,7 @@
                                 <tr>
                                     <td>{{$employee->firstname}}</td>
                                     <td>{{$employee->lastname}}</td>
-                                    <td>{{$employee->company_id}}</td>
+                                    <td>{{$employee->company->name}}</td>
                                     <td>{{$employee->email}}</td>
                                     <td>{{$employee->phone}}</td>
                                     <td>
