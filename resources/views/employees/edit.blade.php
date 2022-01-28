@@ -21,7 +21,7 @@
             <label class="w-100">company
               <select class="form-control"  name="company_id">
                 @foreach ($companies as $company)
-                <option value="{{$company->id}}">{{$company->name}}</option>
+                <option value="{{$company->id}}" @if ($company->id == $employee ->company_id) selected @endif>{{$company->name}}</option>
                 @endforeach
               </select>
             </label>
